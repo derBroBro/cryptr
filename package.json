@@ -13,7 +13,7 @@
         "start": "electron ./app",
         "dev": "cross-env CRYPTR_ENV='development' npm run start",
         "test": "./node_modules/mocha/bin/mocha",
-        "release": "build -mwl --x64 --ia32"
+        "release": "build -l --x64"
     },
     "devDependencies": {
         "chai": "^3.5.0",
@@ -29,24 +29,9 @@
         "productName": "Cryptr",
         "copyright": "Copyright © 2019 Adobe. All rights reserved.",
         "appId": "io.cryptr",
-        "mac": {
-            "category": "public.app-category.productivity",
-            "publish": [
-                "github"
-            ]
-        },
-        "win": {
-            "icon": "https://github.com/jcrowthe/cryptr/blob/vault-integration/app/images/cryptr-internal.png",
-            "publish": [
-                "github"
-            ]
-        },
         "linux": {
             "target": [
-                "AppImage",
-                "deb",
-                "rpm",
-                "tar.gz"
+                "AppImage"
             ]
         }
     }
